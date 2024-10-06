@@ -8,6 +8,7 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
+import StarParticles from "./components/StarParticles";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -35,6 +36,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
       <body className="min-h-screen min-w-screen flex items-center justify-center">
         <div className="max-w-[1440px] max-h-[810px] relative w-full flex items-center justify-center aspect-video overflow-visible overflow-x-clip">
+          <StarParticles />
+
           {children}
 
           <ScrollRestoration />

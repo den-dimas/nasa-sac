@@ -26,8 +26,6 @@ export default function Index() {
 
   return (
     <>
-      <StarParticles />
-
       <div className="w-full h-full aspect-video z-10">
         <AnimatePresence>
           <motion.img

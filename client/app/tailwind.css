@@ -26,6 +26,11 @@
       drop-shadow(0 1.5px 0 white) drop-shadow(0 -1.5px 0 white);
   }
 
+  .clickable:hover {
+    filter: drop-shadow(1.5px 0 0 #fef08a) drop-shadow(-1.5px 0 0 #fef08a)
+      drop-shadow(0 1.5px 0 #fef08a) drop-shadow(0 -1.5px 0 #fef08a);
+  }
+
   .img-outline-glow {
     @apply img-outline;
   }
