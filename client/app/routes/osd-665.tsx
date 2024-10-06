@@ -45,8 +45,8 @@ export default function OSD665() {
   const [showAssays, setShowAssays] = useState(false);
 
   const metadata = useCachedLoaderData<typeof loader>();
-  const samples: Sample[] = metadata.samples.tableData.first;
-  const assays: any[] = metadata.assays.tableData.first;
+  const samples: Sample[] = metadata.samples.tableData.current;
+  const assays: any[] = metadata.assays.tableData.current;
 
   return (
     <>
