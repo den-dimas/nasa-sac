@@ -15,7 +15,7 @@ export const get379 = async (req, res) => {
 export const get665 = async (req, res) => {
   try {
     const data = await axios.get(
-      "https://osdr.nasa.gov/osdr/data/osd/meta/665?api_key=OncOIJhxEFpsWAuDD9BvQ4cfKnWz4fsKRNMhUhnU"
+      "https://osdr.nasa.gov/geode-py/ws/repo/studies/OSD-665/table/4?page=1&page_size=141&table_name=sample"
     );
 
     res.status(200).send(data.data);
