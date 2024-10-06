@@ -25,7 +25,7 @@ export default function Index() {
       <StarParticles />
 
       <div className="w-full h-full aspect-video z-10">
-        <AnimatePresence mode="wait">
+        <AnimatePresence>
           <motion.img
             src={earth}
             className="absolute drop-shadow-[0_0_1rem_white] origin-bottom ease-in-out"
