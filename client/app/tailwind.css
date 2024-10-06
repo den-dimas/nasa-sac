@@ -55,6 +55,16 @@
   }
 }
 
+@keyframes rotate-full {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
 .animate-paused {
   animation-play-state: paused;
 }
@@ -77,4 +87,8 @@
 .animate-nips:hover {
   animation-play-state: paused;
   scale: 1.2;
+}
+
+.animate-rotate-full {
+  animation: rotate-full 120s forwards infinite linear;
 }
