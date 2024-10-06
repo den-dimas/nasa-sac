@@ -8,7 +8,6 @@ import {
 import type { LinksFunction } from "@remix-run/node";
 
 import "./tailwind.css";
-import StarParticles from "./components/StarParticles";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -25,7 +24,7 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-transparent">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,10 +33,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
 
-      <body className="min-h-screen min-w-screen flex items-center justify-center">
+      <body className="min-h-screen min-w-screen flex items-center justify-center bg-transparent">
         <div className="max-w-[1440px] max-h-[810px] relative w-full flex items-center justify-center aspect-video overflow-visible overflow-x-clip">
-          <StarParticles />
-
           {children}
 
           <ScrollRestoration />
