@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 5000;
 /* Allow Cross Origin Request */
 app.use(
   cors({
-    origin: "*",
+    origin: ["https://osdr.nasa.gov", "http://localhost:3000"],
     credentials: true,
     allowedHeaders: [
       "Authorization",
