@@ -3,7 +3,7 @@ import axios from "axios";
 export const get379 = async (req, res) => {
   try {
     const data = await axios.get(
-      "https://osdr.nasa.gov/osdr/data/osd/meta/379?api_key=OncOIJhxEFpsWAuDD9BvQ4cfKnWz4fsKRNMhUhnU"
+      "https://osdr.nasa.gov/geode-py/ws/repo/studies/OSD-379/table/4?page=1&page_size=141&table_name=sample"
     );
 
     res.status(200).send(data.data);
