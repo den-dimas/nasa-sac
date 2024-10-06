@@ -1,13 +1,19 @@
-# Welcome to Remix!
-
-- 📖 [Remix docs](https://remix.run/docs)
-
 ## Development
 
-Run the dev server:
+Run the client:
 
 ```shellscript
+cd client
+npm i
 npm run dev
+```
+
+Run the server:
+
+```shellscript
+cd server
+npm i
+npm run start
 ```
 
 ## Deployment
