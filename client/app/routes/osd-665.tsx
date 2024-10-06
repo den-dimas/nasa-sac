@@ -55,7 +55,7 @@ export default function OSD665() {
                     <img
                         id="jars"
                         src={jars}
-                        className="absolute top-[30%] left-[53%] w-[13%] clickable cursor-pointer"
+                        className="absolute top-[30%] left-[53.5%] w-[13%] clickable cursor-pointer"
                         onClick={() => setShowSamples(true)}
                     />
 
@@ -81,9 +81,11 @@ export default function OSD665() {
                     />
 
 
+                <AnimatePresence>
                     {showSamples && (
-                        <SampleWindow setShowSamples={setShowSamples} samples={samples} />
+                        <SampleWindow setShow={setShowSamples} data={samples} />
                     )}
+                </AnimatePresence>
                 </motion.div>
             </AnimatePresence>
         </>
