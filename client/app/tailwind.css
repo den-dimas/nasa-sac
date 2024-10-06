@@ -8,5 +8,73 @@
   *::after {
     box-sizing: border-box;
     margin: 0;
+    user-select: none !important;
   }
+
+  h1 {
+    @apply max-sm:text-lg;
+  }
+
+  p {
+    @apply max-sm:text-sm;
+  }
+}
+
+@layer components {
+  .img-outline {
+    filter: drop-shadow(1.5px 0 0 white) drop-shadow(-1.5px 0 0 white)
+      drop-shadow(0 1.5px 0 white) drop-shadow(0 -1.5px 0 white);
+  }
+
+  .img-outline-glow {
+    @apply img-outline;
+  }
+
+  .img-outline-glow:hover {
+    filter: drop-shadow(1.5px 0 0 #fef08a) drop-shadow(-1.5px 0 0 #fef08a)
+      drop-shadow(0 1.5px 0 #fef08a) drop-shadow(0 -1.5px 0 #fef08a)
+      drop-shadow(0 0 4rem white);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(-12deg) translateY(0%);
+  }
+
+  20% {
+    transform: rotate(-12deg);
+  }
+
+  80% {
+    transform: rotate(12deg) translateY(10%);
+  }
+
+  100% {
+    transform: rotate(12deg);
+  }
+}
+
+.animate-paused {
+  animation-play-state: paused;
+}
+
+.animate-spin {
+  scale: 1;
+  animation: spin 4s alternate infinite;
+}
+
+.animate-spin:hover {
+  animation-play-state: paused;
+  scale: 1.2;
+}
+
+.animate-nips {
+  scale: 1;
+  animation: spin 7s alternate-reverse infinite;
+}
+
+.animate-nips:hover {
+  animation-play-state: paused;
+  scale: 1.2;
 }
