@@ -29,3 +29,33 @@ export const getOSD665 = async () => {
     return null;
   }
 };
+
+export const getaOSD379 = async () => {
+  try {
+    const response = await axios.get(`/geta-379`);
+
+    if (!response || !response.data) {
+      return [];
+    }
+
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};
+
+export const getaOSD665 = async () => {
+  try {
+    const response = await axios.get(`/geta-665`);
+
+    if (!response || !response.data) {
+      return [];
+    }
+
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};
