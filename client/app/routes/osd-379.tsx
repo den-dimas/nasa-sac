@@ -17,6 +17,7 @@ import jars from "../../assets/379/jars.png";
 import monitor from "../../assets/379/monitor.png";
 import poster from "../../assets/379/poster.png";
 import goto from "../../assets/379/goto.png";
+import ProtocolOSD379 from "~/components/Protocol379";
 
 export const meta: MetaFunction = () => {
   return [{ title: "Research OSD 379 Data" }];
@@ -41,6 +42,7 @@ export default function OSD379() {
 
   const [showSamples, setShowSamples] = useState(false);
   const [showAssays, setShowAssays] = useState(false);
+  const [showProtocol, setShowProtocol] = useState(false);
 
   const metadata = useCachedLoaderData<typeof loader>();
   const samples: Sample[] = metadata.samples.tableData.first;
@@ -76,7 +78,7 @@ export default function OSD379() {
             id="poster"
             src={poster}
             className="absolute top-[49%] left-[3.8%] w-[9.5%] clickable cursor-pointer"
-            onClick={() => setShowSamples(true)}
+            onClick={() => setShowProtocol(true)}
           />
 
           <img
@@ -97,6 +99,8 @@ export default function OSD379() {
               <AssaysWindow setShow={setShowAssays} data={assays} />
             )}
           </AnimatePresence>
+
+          {showProtocol && <ProtocolOSD379 setShow={setShowProtocol} />}
         </motion.div>
       </AnimatePresence>
     </>
