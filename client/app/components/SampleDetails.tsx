@@ -27,13 +27,28 @@ export default function SampleDetails({
 
         <div className="flex items-center gap-9 h-full">
           <img src={rat} className="w-[15%] object-contain object-center" />
-
           <div>
-            <h1>{sample["Sample Name"]}</h1>
-            <h1>{sample["Characteristics[Organism]"]}</h1>
-            <h1>{sample["Characteristics[Sex]"]}</h1>
-            <h1>{sample["Characteristics[Strain]"]}</h1>
-            <h1>{sample["Factor Value[Age]"]} Weeks</h1>
+            <h1>Sample Name: {sample["Sample Name"]}</h1>
+            <h1>Organism: {sample["Characteristics[Organism]"]}</h1>
+            <h1>Sex: {sample["Characteristics[Sex]"]}</h1>
+            <h1>Strain: {sample["Characteristics[Strain]"]}</h1>
+            <h1>Age: {sample["Factor Value[Age]"]} Weeks</h1>
+            <h1>Material Type: {sample["Characteristics[Material Type]"]}</h1>
+            <h1>Genotype: {sample["Characteristics[Genotype]"]}</h1>
+            <h1>Spaceflight: {sample["Factor Value[Spaceflight]"]}</h1>
+            <h1>Animal Source: {sample["Characteristics[Animal Source]"]}</h1>
+            <h1>Euthanasia Location: {sample["Factor Value[Euthanasia Location]"]}</h1>
+            <h1>Dissection Contidition: {sample["Factor Value[Dissection Condition]"]}</h1>
+            <h1>Protocol REF: {sample["Protocol REF"]}</h1>
+            <h1>Light Cycle: {sample["Parameter Value[Light Cycle]"]}</h1>
+            <h1>Diet: {sample["Parameter Value[Diet]"]}</h1>
+            <h1>LAR Receipt Date: {sample["Comment[LAR Animal Receipt Date at Scrippts]"]}</h1>
+            <h1>Euthanasia Date: {sample["Comment[Euthanasia Dates]"]}</h1>
+            <h1>Dissection Date: {sample["Comment[Dissection Dates]"]}</h1>
+            <h1>Euthanasia Method: {sample["Parameter Value[Euthanasia Method]"]}</h1>
+            <h1>Presevation Method: {sample["Parameter Value[Sample Preservation Method]"]}</h1>
+            <h1>Presevation Mode: {sample["Parameter Value[Carcass Preservation Method]"]}</h1>
+            <h1>Storage Temperature: {sample["Parameter Value[Sample Storage Temperature]"]}</h1>
           </div>
         </div>
       </div>
