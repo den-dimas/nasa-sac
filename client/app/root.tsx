@@ -24,7 +24,7 @@ export const links: LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="bg-gray-700">
+    <html lang="en">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -34,7 +34,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </head>
 
       <body className="min-h-screen min-w-screen flex items-center justify-center">
-        <div className="max-w-[1440px] max-h-[810px] relative w-full flex items-center justify-center aspect-video overflow-visible">
+        <div className="max-w-[1440px] max-h-[810px] relative w-full flex items-center justify-center aspect-video overflow-visible overflow-x-clip">
           {children}
 
           <ScrollRestoration />

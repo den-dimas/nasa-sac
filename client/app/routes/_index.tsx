@@ -6,8 +6,7 @@ import StarParticles from "~/components/StarParticles";
 
 import osd397 from "../../assets/osd397.svg";
 import osd665 from "../../assets/osd665.svg";
-import earth from "../../assets/earth.png";
-import { useState } from "react";
+import earth from "../../assets/earth-full.png";
 
 export const meta: MetaFunction = () => {
   return [
@@ -28,7 +27,7 @@ export default function Index() {
         <AnimatePresence>
           <motion.img
             src={earth}
-            className="absolute drop-shadow-[0_0_1rem_white] origin-bottom ease-in-out"
+            className="absolute drop-shadow-[0_0_1rem_white] origin-center ease-in-out top-[70%] w-[150%] animate-rotate-full"
             initial={{ y: "300%", scale: 0 }}
             animate={{ y: "0%", scale: 1 }}
             exit={{ y: "300%", scale: 0 }}
@@ -43,7 +42,7 @@ export default function Index() {
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             transition={{ duration: 1, easings: "easeInOut" }}
-            onClick={() => navigate("/osd-379")}
+            onClick={() => navigate("/transition?research=osd-379")}
             key={0}
           >
             <img
@@ -55,7 +54,7 @@ export default function Index() {
 
             <div className="text-white text-center font-bold text-xl scale-0 group-hover:scale-100 origin-top ease-in-out duration-500 absolute top-[110%] left-[50%] -translate-x-1/2">
               <h1 className="text-2xl bg-white text-black px-1 py-1">
-                OSD-397
+                OSD-379
               </h1>
               <p className="whitespace-nowrap">Liver Experiment</p>
             </div>
@@ -68,7 +67,7 @@ export default function Index() {
             animate={{ scale: 1 }}
             exit={{ scale: 0 }}
             transition={{ duration: 0.5, easings: "ease-in-out" }}
-            onClick={() => navigate("/osd-379")}
+            onClick={() => navigate("/transition?research=osd-665")}
             key={1}
           >
             <img
@@ -92,6 +91,7 @@ export default function Index() {
         exit={{ scaleX: 1, transition: { duration: 0.5, ease: "circIn" } }}
         style={{ originX: isPresent ? 0 : 1 }}
         className="fixed top-0 left-0 right-0 bottom-0 bg-white z-20"
+        key={6}
       />
     </>
   );
