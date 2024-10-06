@@ -7,7 +7,6 @@ import StarParticles from "~/components/StarParticles";
 import osd397 from "../../assets/osd397.svg";
 import osd665 from "../../assets/osd665.svg";
 import earth from "../../assets/earth-full.png";
-import { useEffect } from "react";
 
 export const meta: MetaFunction = () => {
   return [
@@ -19,10 +18,6 @@ export const meta: MetaFunction = () => {
 export default function Index() {
   const navigate = useNavigate();
   const isPresent = useIsPresent();
-
-  useEffect(() => {
-    navigate(".", { replace: true });
-  }, []);
 
   return (
     <>
