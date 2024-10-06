@@ -37,18 +37,37 @@ export default function SampleDetails({
             <h1>Genotype: {sample["Characteristics[Genotype]"]}</h1>
             <h1>Spaceflight: {sample["Factor Value[Spaceflight]"]}</h1>
             <h1>Animal Source: {sample["Characteristics[Animal Source]"]}</h1>
-            <h1>Euthanasia Location: {sample["Factor Value[Euthanasia Location]"]}</h1>
-            <h1>Dissection Contidition: {sample["Factor Value[Dissection Condition]"]}</h1>
+            <h1>
+              Euthanasia Location: {sample["Factor Value[Euthanasia Location]"]}
+            </h1>
+            <h1>
+              Dissection Contidition:{" "}
+              {sample["Factor Value[Dissection Condition]"]}
+            </h1>
             <h1>Protocol REF: {sample["Protocol REF"]}</h1>
             <h1>Light Cycle: {sample["Parameter Value[Light Cycle]"]}</h1>
             <h1>Diet: {sample["Parameter Value[Diet]"]}</h1>
-            <h1>LAR Receipt Date: {sample["Comment[LAR Animal Receipt Date at Scrippts]"]}</h1>
+            <h1>
+              LAR Receipt Date:{" "}
+              {sample["Comment[LAR Animal Receipt Date at Scrippts]"]}
+            </h1>
             <h1>Euthanasia Date: {sample["Comment[Euthanasia Dates]"]}</h1>
             <h1>Dissection Date: {sample["Comment[Dissection Dates]"]}</h1>
-            <h1>Euthanasia Method: {sample["Parameter Value[Euthanasia Method]"]}</h1>
-            <h1>Presevation Method: {sample["Parameter Value[Sample Preservation Method]"]}</h1>
-            <h1>Presevation Mode: {sample["Parameter Value[Carcass Preservation Method]"]}</h1>
-            <h1>Storage Temperature: {sample["Parameter Value[Sample Storage Temperature]"]}</h1>
+            <h1>
+              Euthanasia Method: {sample["Parameter Value[Euthanasia Method]"]}
+            </h1>
+            <h1>
+              Presevation Method:{" "}
+              {sample["Parameter Value[Sample Preservation Method]"]}
+            </h1>
+            <h1>
+              Presevation Mode:{" "}
+              {sample["Parameter Value[Carcass Preservation Method]"]}
+            </h1>
+            <h1>
+              Storage Temperature:{" "}
+              {sample["Parameter Value[Sample Storage Temperature]"]}
+            </h1>
           </div>
         </div>
       </div>
