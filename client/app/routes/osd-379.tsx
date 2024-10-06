@@ -27,7 +27,7 @@ export default function OSD379() {
 
   return (
     <AnimatePresence mode="wait" initial={false}>
-      <motion.div id="osd379">
+      <motion.div id="osd379" className="aspect-video">
         <div
           id="samples-trigger-osd-379"
           className="border-2 border-black w-64 h-64 bg-orange-300 rounded-xl absolute top-[calc(50%-16rem)] left-12 flex"
