@@ -1,13 +1,8 @@
+import { useEffect } from "react";
+import { useLoaderData, useNavigate } from "@remix-run/react";
 import type { LoaderFunction, MetaFunction } from "@remix-run/node";
-import {
-  Link,
-  Navigate,
-  useLoaderData,
-  useNavigate,
-  useParams,
-  useSearchParams,
-} from "@remix-run/react";
 import { motion, AnimatePresence, useIsPresent } from "framer-motion";
+
 import StarParticles from "~/components/StarParticles";
 
 export const meta: MetaFunction = () => {
@@ -24,14 +19,17 @@ export const loader: LoaderFunction = async ({ request }) => {
 export default function Transition() {
   const isPresent = useIsPresent();
   const params = useLoaderData<typeof loader>();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate("/" + params, { replace: true });
+  }, []);
 
   return (
     <>
       <StarParticles />
 
       <AnimatePresence>
-        <Navigate to={"/" + params} key={2} replace={true} />
-
         <div className="w-screen h-screen flex items-center justify-center z-10">
           <h1 className="font-black text-white text-3xl">LOADING...</h1>
         </div>
