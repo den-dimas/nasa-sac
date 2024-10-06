@@ -82,9 +82,11 @@ export default function OSD379() {
             onClick={() => navigate("/transition?research=osd-665")}
           />
 
-          {showSamples && (
-            <SampleWindow setShowSamples={setShowSamples} samples={samples} />
-          )}
+          <AnimatePresence>
+            {showSamples && (
+              <SampleWindow setShow={setShowSamples} data={samples} />
+            )}
+          </AnimatePresence>
         </motion.div>
       </AnimatePresence>
     </>
