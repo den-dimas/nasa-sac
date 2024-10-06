@@ -29,9 +29,9 @@ export default function SampleDetails({
           <img src={rat} className="w-[15%] object-contain object-center" />
           <div>
             <h1>Sample Name: {sample["Sample Name"]}</h1>
+            <h1>Strain: {sample["Characteristics[Strain]"]}</h1>
             <h1>Organism: {sample["Characteristics[Organism]"]}</h1>
             <h1>Sex: {sample["Characteristics[Sex]"]}</h1>
-            <h1>Strain: {sample["Characteristics[Strain]"]}</h1>
             <h1>Age: {sample["Factor Value[Age]"]} Weeks</h1>
             <h1>Material Type: {sample["Characteristics[Material Type]"]}</h1>
             <h1>Genotype: {sample["Characteristics[Genotype]"]}</h1>
